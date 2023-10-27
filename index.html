@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Sample Webpage</title>
-        <link rel="stylesheet" type=""text/css" href="css/style5.css"/>
+        <link rel="stylesheet" type=""text/css" href="style5.css"/>
         </head>
         <body>
             
@@ -13,12 +13,12 @@
     </div>
     <div id="banner">
         <h1 align="center">ANIMALS</h1>
-    <img src="images/banner.png"/>
+    <img src="banner.png"/>
     </div>
     <div id="content1">
        
         <h2>Cat:</h2>
-        <img src="images/cat.png"/>
+        <img src="cat.png"/>
         <ul>
             <li>A small animal with soft fur that people often keep as a pet.</li>
             <li>A wild animal of the cat family.</li>
@@ -29,7 +29,7 @@
     </div>
     <div id="content2">
     <h2>Dog</h2>
-    <img src="images/dog.png"/>
+    <img src="dog.png"/>
     <ul>
         <li>An animal that many people keep as a pet, or for working on farms, hunting,etc.
         </li>
@@ -40,7 +40,7 @@
     </div>
     <div id="content3">
     <h2>Elephant</h2>
-    <img src="images/elephant.png"/>
+    <img src="elephant.png"/>
     <ul>
         <li>A very large grey animal with big ears, two long curved teeth (tusks) and a long nose (trunk).
 </li>
@@ -50,7 +50,7 @@
     </div>
     <div id="content4">
         <h2>Lion</h2>
-        <img src="images/lion.png"/>
+        <img src="lion.png"/>
         <ul>
             <li>A large animal of the cat family that lives in Africa and parts of southern Asia. Male lions have a large amount of hair around their head and neck
             </li>
@@ -58,6 +58,23 @@
 </li>
 </ul>
             </div>
+        
+<script>
+    document.querySelectorAll('a[href^="#]').forEach(anchor=>{
+        anchor.addEventListener('click',function(e){
+            e.preventDefault();
+            const targetId=this.getAttribute('href').substring(1);
+            const targetElement=document.getElementById(targetId);
+            if(targetElement){
+                window.scrollTo({
+                    top:targetElement.offsetTop,
+                    behavoiur:'smooth'
+                });
+            }
+        });
+    });
+</script>  
+
     </div>
         </body>
 </html>
